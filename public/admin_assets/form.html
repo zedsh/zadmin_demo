@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Админка</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="libs/fontawesome/css/all.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Портал Артистов</a>
+    <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+            <a class="nav-link" href="#">Sign out</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <span data-feather="home"></span>
+                            Артисты <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="file"></span>
+                            Социальные сети
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="file"></span>
+                            Типы артистов
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <h2>Артисты - редактирование</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Имя</label>
+                    <input type="text" class="form-control" id="name">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="description">Описание</label>
+                    <textarea class="form-control mce" id="description"></textarea>
+                </div>
+
+                <form>
+                    <div class="form-group">
+                        <label for="photo">Фото</label>
+                        <input name="photo" type="file" class="form-control-file" id="photo" multiple>
+                    </div>
+                </form>
+
+                <div class="form-group">
+                    <label for="artist_type">Тип ариста</label>
+                    <select class="form-control" id="artist_type">
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="socials">Социальные сети <a href="#" role="button" class="btn btn-primary btn-sm"
+                                                            data-toggle="modal" data-target="#exampleModal">
+                        <i class="fas fa-plus fa-xs"></i>
+                    </a></label>
+                    <div class="row">
+                        <div class="col-12" id="socials">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-sm">
+                                    <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Имя</th>
+                                        <th>Действия</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="#" role="button" class="btn btn-primary btn-sm">
+                                                <i class="fas fa-pencil-alt fa-xs"></i>
+                                            </a>
+                                            <a href="#" role="button" class="btn btn-danger btn-sm">
+                                                <i class="fas fa-trash fa-sm"></i>
+                                            </a>
+                                        </td>
+                                        <td>Василий Тёркин</td>
+                                        <td>
+                                            asdf
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#" role="button" class="btn btn-primary btn-sm">
+                                                <i class="fas fa-pencil-alt fa-xs"></i>
+                                            </a>
+                                            <a href="#" role="button" class="btn btn-danger btn-sm">
+                                                <i class="fas fa-trash fa-sm"></i>
+                                            </a>
+                                        </td>
+                                        <td>Иван Тёркин</td>
+                                        <td>sit</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Сохранить</button>
+                <button type="submit" class="btn btn-info">Отменить</button>
+            </form>
+
+        </main>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="exampleModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Добавление социальной сети</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="social">Социальная сеть</label>
+                            <select class="form-control" id="social">
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="link">Ссылка</label>
+                            <input type="text" class="form-control" id="link">
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="libs/tinymce/tinymce.min.js"></script>
+<script>tinymce.init({selector: '.mce'});</script>
+</body>
+</html>
+
