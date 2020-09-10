@@ -4,8 +4,8 @@
 namespace App\Http\Controllers\Admin;
 
 
-use App\Admin\Controllers\BaseAdminController;
 use App\Admin\Templates\ProjectTemplate;
+use zedsh\zadmin\Controllers\BaseAdminController;
 
 class AdminController extends BaseAdminController
 {

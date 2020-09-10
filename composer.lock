@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3698dde840eecd65922777f873eddc93",
+    "content-hash": "c04582aa75a223274a1cbeca970052c9",
     "packages": [
         {
             "name": "brick/math",
@@ -4440,6 +4440,57 @@
                 "php"
             ],
             "time": "2020-07-22T23:32:04+00:00"
+        },
+        {
+            "name": "zedsh/zadmin",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zedsh/zadmin.git",
+                "reference": "207b49d10d1acdf58819ab0152c7da447d17a75b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zedsh/zadmin/zipball/207b49d10d1acdf58819ab0152c7da447d17a75b",
+                "reference": "207b49d10d1acdf58819ab0152c7da447d17a75b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.16"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "zedsh\\zadmin\\zadminServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "zedsh\\zadmin\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Zaboev Eduard",
+                    "email": "zedsh@icloud.com",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "homepage": "https://github.com/spatie/ZAdmin",
+            "keywords": [
+                "ZAdmin"
+            ],
+            "time": "2020-08-11T20:20:34+00:00"
         }
     ],
     "packages-dev": [

@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Admin\Fields\HiddenField;
-use App\Admin\Fields\PasswordField;
-use App\Admin\Fields\TextField;
-use App\Admin\Forms\BaseForm;
-use App\Admin\Lists\Columns\ActionsColumn;
-use App\Admin\Lists\Columns\TextColumn;
-use App\Admin\Lists\TableList;
 use App\Http\Requests\Admin\UserRequest;
 use App\User;
 use Illuminate\Support\Facades\Hash;
+use zedsh\zadmin\Fields\HiddenField;
+use zedsh\zadmin\Fields\PasswordField;
+use zedsh\zadmin\Fields\TextField;
+use zedsh\zadmin\Forms\BaseForm;
+use zedsh\zadmin\Lists\Columns\ActionsColumn;
+use zedsh\zadmin\Lists\Columns\TextColumn;
+use zedsh\zadmin\Lists\TableList;
 
 class UserController extends AdminController
 {
