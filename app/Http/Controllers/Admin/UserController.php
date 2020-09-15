@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Admin\FieldGroup\FieldGroup;
 use App\Http\Requests\Admin\UserRequest;
 use App\User;
 use Illuminate\Support\Facades\Hash;
@@ -46,15 +47,18 @@ class UserController extends AdminController
     {
 
         $model = User::query()->findOrFail($id);
-        $form = new BaseForm('main', [
+
+        $fieldGroup = new FieldGroup('Пользователь', [
             (new HiddenField('id'))->setValue($id),
             new TextField('name', 'Имя'),
             new TextField('email', 'Email'),
             new PasswordField('password', 'Пароль'),
             new PasswordField('password_confirmation', 'Подтвердите пароль'),
         ]);
+
+
+        $form = new BaseForm('main', [$fieldGroup]);
         $form->setModel($model);
-        $form->setTitle('Пользователь');
         $form->setBack(route('user.list'));
         $form->setAction(route('user.save', ['id' => $id]));
 
