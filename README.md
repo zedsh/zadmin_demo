@@ -4,7 +4,7 @@
 cd docker
 ./up.sh
 ./dctl.sh run composer install
-ln -s .env ../.env
+ln -s ./docker/.env ../.env
 ./dctl.sh run php artisan migrate
 ./dctl.sh run php artisan db:seed
 ```
