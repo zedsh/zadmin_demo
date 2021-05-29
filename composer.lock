@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bafb20809927dca4c7cbd4725c2fb37d",
+    "content-hash": "b4f650ad04496c79c47505f6b8619bb1",
     "packages": [
         {
             "name": "brick/math",
@@ -5210,17 +5210,11 @@
         },
         {
             "name": "zedsh/zadmin",
-            "version": "1.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zedsh/zadmin.git",
-                "reference": "a2b6335aadbc700ab804f8872f090e80b1223e27"
-            },
+            "version": "dev-master",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zedsh/zadmin/zipball/a2b6335aadbc700ab804f8872f090e80b1223e27",
-                "reference": "a2b6335aadbc700ab804f8872f090e80b1223e27",
-                "shasum": ""
+                "type": "path",
+                "url": "zadmin",
+                "reference": "c15c509789021a6700e2a420096b59e8f4ad9a27"
             },
             "require": {
                 "php": "^7.2"
@@ -5241,7 +5235,16 @@
                     "zedsh\\zadmin\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "zedsh\\zadmin\\Tests\\": "tests"
+                }
+            },
+            "scripts": {
+                "format": [
+                    "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -5257,11 +5260,10 @@
             "keywords": [
                 "ZAdmin"
             ],
-            "support": {
-                "issues": "https://github.com/zedsh/zadmin/issues",
-                "source": "https://github.com/zedsh/zadmin/tree/1.2.1"
-            },
-            "time": "2021-01-13T20:47:50+00:00"
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         }
     ],
     "packages-dev": [
@@ -7494,7 +7496,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "zedsh/zadmin": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

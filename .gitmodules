@@ -1,0 +1,3 @@
+[submodule "zadmin"]
+	path = zadmin
+	url = git@github.com:zedsh/zadmin.git

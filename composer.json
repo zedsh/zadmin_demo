@@ -10,16 +10,16 @@
     "require": {
         "php": "^7.2",
         "ext-json": "*",
-        "laravel-lang/lang": "~10.0",
         "doctrine/dbal": "^2.10",
         "fideloper/proxy": "^4.0",
         "geoip2/geoip2": "~2.0",
         "intervention/image": "^2.5",
+        "laravel-lang/lang": "~10.0",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
         "torann/geoip": "^1.2",
-        "zedsh/zadmin": "^1.0"
+        "zedsh/zadmin": "@dev"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
@@ -70,6 +70,14 @@
         "hooks": {
             "type": "composer",
             "url": "https://larapack.io"
+        },
+        "dev-zadmin": {
+            "type": "path",
+            "url": "zadmin",
+                "options": {
+                "symlink": true
+            }
         }
     }
+
 }
